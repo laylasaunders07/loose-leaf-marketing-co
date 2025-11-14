@@ -30,6 +30,38 @@ main {
     min-height: 0; /* Flexbox hack to allow shrinking */
 }
 
+.title {
+    font-family: 'DynaPuff', cursive;
+    font-size: 36px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 700px;
+    margin: 0px auto;
+    background-color: var(--foreground);
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 50px;
+    padding-top: 20px;
+    border-radius: 50px;
+    border: 3px solid var(--border);
+    text-align: center;
+}
+
+.basic-box {
+    background-color: var(--foreground);
+    padding: 20px;
+    border-radius: 50px;
+    border: 3px solid var(--border);
+    margin: 0 auto;
+    text-align: center;
+    margin: 0px auto;
+    border-radius: 50px;
+    max-width: 400px;
+}
+
 button {
     background-color: var(--background);
     color: var(--text);
@@ -41,11 +73,42 @@ button {
     transition: background-color 0.3s ease;
 }
 
+.button-custom {
+    display: inline-block; /* Key change: makes it behave like a block element for sizing */
+    text-decoration: none; /* Removes the default underline for links */
+    text-align: center; /* Centers the text within the button-like link */
+    background-color: var(--background);
+    color: var(--text);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.dual-container {
+    display: flex;
+    min-height: 100vh; /* Full viewport height */
+    align-items: center;
+    padding-bottom: 10vh; /* Pushes content up */
+    box-sizing: border-box; /* Includes padding in height calculation */
+}
+
+.dual-left {
+    flex: 1;
+}
+
+.dual-right {
+    flex: 2;
+}
+
 /* Header */
 
 .header {
     background-color: var(--foreground);
     padding: 10px;
+    padding-right: 40px;
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -150,6 +213,21 @@ footer {
     color: inherit;
 }
 
+/* Basic pages */
+
+.basic-page {
+    display: block;
+    padding: 40px;
+    max-width: 700px;
+    margin: 0 auto;
+    background-color: var(--foreground);
+    margin-top: 70px;
+    margin-bottom: 70px;
+    border-radius: 50px;
+    border: 3px solid var(--border);
+    text-align: center;
+}
+
 /* Home page */
 
 /* About page */
@@ -226,7 +304,6 @@ footer {
     scroll-snap-align: start; /* Snap to the start of the section */
     box-sizing: border-box; /* Include padding and border in height calculation */
     border-bottom: 1px solid var(--border); /* Re-added for visual separation */
-    /* margin-bottom: 50px; Removed to fix snapping */
     text-align: center; /* Center text inside the section */
 }
 
@@ -239,13 +316,8 @@ footer {
     border-radius: 50px; /* Rounded corners */
 }
 
-.about-title {
-    font-family: 'DynaPuff', cursive;
-    font-size: 36px;
-}
-
 /* Services page */
 
-/* Contact page */
+/* Reviews page */
 
-/* Basic pages */
+/* Contact page */
